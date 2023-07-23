@@ -3,17 +3,23 @@
 Dockerized Prometheus exporter for GPU statistics from [nvidia-smi](https://developer.nvidia.com/nvidia-system-management-interface), written in Go.
 Supports multiple GPUs.
 
-# How-To
+# Supported tags and respective `Dockerfile` links
+
+- [`cuda12`, `latest`](docker/cuda12/Dockerfile)
+- [`cuda11`](docker/cuda11/Dockerfile)
+
+# How to use
 
 Run with a Docker command:
-`docker run --privileged --runtime nvidia -p 9202:9202/tcp e7db/prometheus-nvidiasmi`
+```
+docker run --privileged --runtime nvidia -p 9202:9202/tcp e7db/prometheus-nvidiasmi:cuda12
+```
 
 Run through a docker-compose file:
 ```
-version: "3"
 services:
   prometheus-nvidiasmi:
-    image: e7db/prometheus-nvidiasmi
+    image: e7db/prometheus-nvidiasmi:cuda12
     privileged: true
     runtime: nvidia
     ports:

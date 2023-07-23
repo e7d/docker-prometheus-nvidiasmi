@@ -2,9 +2,9 @@ services:
   prometheus-nvidiasmi:
     build:
       context: .
-      dockerfile: Dockerfile.dev
-    # environment:
-    #   - TEST_MODE=1
+      dockerfile: docker/dev/Dockerfile
+    environment:
+      - TEST_MODE=$TEST_MODE
     ports:
       - 9202:9202/tcp
     privileged: true

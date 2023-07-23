@@ -6,7 +6,9 @@ Supports multiple GPUs.
 # Supported tags and respective `Dockerfile` links
 
 - [`cuda12`, `latest`](docker/cuda12/Dockerfile)
+  - based on [nvidia/cuda:12.2.0-base-ubuntu22.04](https://hub.docker.com/r/nvidia/cuda/tags?page=1&name=12.2.0-base-ubuntu22.04)
 - [`cuda11`](docker/cuda11/Dockerfile)
+  - based on [nvidia/cuda:11.1.1-base-ubuntu20.04](https://hub.docker.com/r/nvidia/cuda/tags?page=1&name=11.1.1-base-ubuntu20.04)
 
 # How to use
 
